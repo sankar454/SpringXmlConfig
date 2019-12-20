@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean id="cricket" class="com.experiments.springxmlconfig.games.Cricket">
+        	<property name="name" value="Cricket"></property>
+        	<property name="rule" ref="cricketRule"></property>
+        </bean>
+        
+        <bean id="cricketRule" class="com.experiments.springxmlconfig.services.Rules">
+        	<property name="rule" value="Should have a bat and a ball"></property>
+        </bean>
+</beans>
